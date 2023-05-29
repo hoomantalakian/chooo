@@ -1,9 +1,20 @@
-
 export default function Home() {
 	return (
-		<main>
-			<h1 className="font-extrabold text-6xl text-slate-50">چــو دیزاین</h1>
-      <p className="pt-5 text-slate-50">جادوی هزاره ســوم</p>
-		</main>
+		<div className=" text-slate-50">
+			<header>
+        <ul id="menu">
+          <li>خانه</li>
+          <li>محصولات</li>
+          <li>گالری</li>
+          <li>درباره</li>
+        </ul>
+      </header>
+			<main>
+				<h1 className="font-extrabold text-6xl ">
+					چــو دیزاین
+				</h1>
+				<p className="pt-5">جادوی هزاره ســوم</p>
+			</main>
+		</div>
 	);
 }
