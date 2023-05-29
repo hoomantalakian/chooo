@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ /* -------- */
+
+
+$colors : rgb(68, 109, 108);
+
+
+body {
+    background-color: $colors;
+}
