@@ -1,7 +1,7 @@
 export default function Home() {
 	return (
-		<div className=" text-slate-50">
-			<header>
+		<div id="BODY" className=" text-slate-50">
+			<header >
         <ul id="menu">
           <li>خانه</li>
           <li>محصولات</li>
