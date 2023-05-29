@@ -4,16 +4,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
-/* ------------- */
+/* ------------------------------------ */
 
 $colors: rgb(68, 109, 108);
 
 html {
-    font-family: 'Vazirmatn', sans-serif;
+	font-family: "Vazirmatn", sans-serif;
 }
 
 body {
-	background-image: url("/assets/bg-roof.jpg");
+	background: url("/assets/bg-roof.jpg");
+	background-color: gray;
+	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-size: cover;
 }
