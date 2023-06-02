@@ -1,15 +1,21 @@
 import React from "react";
 import style from "./Header.module.scss";
 
+const menuItems = [
+	{ title: "خانه", src: "home" },
+	{ title: "محصولات", src: "products" },
+	{ title: "گالری", src: "gallery" },
+	{ title: "درباره", src: "about" },
+];
+
 function Header() {
 	return (
 		<header className={style.header}>
 			<nav>
 				<ul className={style.menu}>
-					<li>خانه</li>
-					<li>محصولات</li>
-					<li>گالری</li>
-					<li>درباره</li>
+					{menuItems.map((item) => {
+						return <li key={item.title}>{item.title}</li>;
+					})}
 				</ul>
 			</nav>
 		</header>
