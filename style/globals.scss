@@ -9,16 +9,21 @@ $colors: (
 	second: rgb(180, 154, 103),
 	third: rgb(165, 64, 45),
 	fourth: rgb(49, 49, 73),
+	//
+	light: rgb(237, 237, 237),
+	darks: rgb(33, 33, 33),
 );
 
 // -------------------------
 
 html {
 	font-family: "Vazirmatn", sans-serif;
+	position: relative;
+	color: map-get($colors, light);
 }
 
 body {
-	background: url("/assets/bg-roof.jpg");
+	background: url("/assets/IMG_2490-funal.jpg");
 	background-color: gray;
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
@@ -29,27 +34,17 @@ body {
 main {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: start;
 	// margin-top: 9rem;
-	align-items: center;
-	height: fit-content;
+	// align-items: center;
+	// height: fit-content;
 	min-height: 100vh;
 	box-sizing: border-box;
 }
 
-header {
-	position: fixed;
-	width: 100vw;
-	background-color: rgba(0, 0, 0, 0.472);
-}
-
-#menu {
+.title {
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	flex-direction: row-reverse;
-	margin: auto;
-	li {
-		padding: 0.75rem 1rem 1rem;
-	}
 }

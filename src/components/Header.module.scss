@@ -1,0 +1,17 @@
+.header {
+	// position: absolute;
+	// top: 50;
+	width: 100vw;
+	background-color: rgba(0, 0, 0, 0.472);
+}
+
+.menu {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row-reverse;
+	margin: auto;
+	li {
+		padding: 0.75rem 1rem 1rem;
+	}
+}
