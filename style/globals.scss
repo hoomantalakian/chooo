@@ -35,11 +35,9 @@ main {
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
-	// margin-top: 9rem;
 	// align-items: center;
-	// height: fit-content;
-	min-height: 100vh;
-	box-sizing: border-box;
+	padding-top: 8rem;
+	height: 100vh;
 }
 
 .title {
