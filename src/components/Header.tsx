@@ -14,7 +14,7 @@ function Header() {
 			<nav>
 				<ul className={style.menu}>
 					{menuItems.map((item) => {
-						return <li key={item.title}>{item.title}</li>;
+						return <li key={item.src}>{item.title}</li>;
 					})}
 				</ul>
 			</nav>
