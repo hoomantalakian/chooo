@@ -7,7 +7,7 @@ export default function Home() {
 		<div>
 			<main>
 				<div className="title">
-					<h1 className="font-extrabold text-6xl ">چــو دیزاین</h1>
+					<h1 className="font-extrabold text-[3.2rem] ">چــو دیزاین</h1>
 					<p className="pt-5">
 						خاطره ی جنگل ها در خانه های شما
 					</p>
