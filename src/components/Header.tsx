@@ -11,24 +11,39 @@ const menuItems = [
 ];
 
 function Header() {
-
-	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false)
+	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
 
 	function hamburgeOpenHAndler() {
-		setIsHamburgerOpen(true)
+		setIsHamburgerOpen(true);
+	}
+	function hamburgeCloseHAndler() {
+		setIsHamburgerOpen(false);
 	}
 
 	return (
 		<header className={style.header}>
 			<nav className={style.full_nav}>
-				<h1 className={style.home_logo}>CHOOO</h1>
-				<ul className={style.menu}>
+				<h1 className={style.home_logo}>LOGO</h1>
+				<ul
+					className={`${style.menu} ${
+						isHamburgerOpen && style.menu_open
+					}`}
+				>
 					{menuItems.map((item) => {
 						return <li key={item.src}>{item.title}</li>;
 					})}
-				{isHamburgerOpen && <li>X</li>}
+					{isHamburgerOpen && (
+						<li>
+							<button onClick={hamburgeCloseHAndler}>بستن</button>
+						</li>
+					)}
 				</ul>
-				<button className={style.burger_btn}>| مِنو |</button>
+				<button
+					className={style.burger_btn}
+					onClick={hamburgeOpenHAndler}
+				>
+					| مِنو |
+				</button>
 			</nav>
 		</header>
 	);

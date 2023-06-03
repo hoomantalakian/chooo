@@ -33,10 +33,11 @@
 	display: none;
 }
 
+// Media Query
+
 @media screen and (max-width: 700px) {
 
 	.menu {
-		// display: flex;
 		display: none;
 		flex-direction: column;
 		background-color: rgb(32, 116, 117);
@@ -47,6 +48,11 @@
 		height: 100vh;
 		padding: 0;
 	}
+
+	.menu_open {
+		display: flex;
+	}
+
 	.burger_btn {
 		display: block;
 		padding-right: 2rem;
