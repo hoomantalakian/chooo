@@ -16,7 +16,7 @@ const mobileMenuItems = [
 	{ title: "محصولات", src: "products" },
 	{ title: "گالـــــــری", src: "gallery" },
 	{ title: "دربـــــــاره", src: "about" },
-	{ title: "مشـــــاوره", src: "about" },
+	{ title: "مشــــاوره", src: "about" },
 ];
 
 // ------------------------
@@ -43,16 +43,20 @@ function Header() {
 				</ul>
 				{/* Mobile Menu */}
 				<ul
+					
 					className={`${style.mobile_menu} ${
 						isHamburgerOpen && style["mobile_menu--open"]
 					}`}
 				>
 					{mobileMenuItems.map((item) => {
-						return <li key={item.src}>{item.title}</li>;
+						return <li key={item.src} onBlur={hamburgeCloseHAndler}>{item.title}</li>;
 					})}
-					<li>
-						<button onClick={hamburgeCloseHAndler}>| بستن |</button>
-					</li>
+					<button
+						className={style.close_btn}
+						onClick={hamburgeCloseHAndler}
+					>
+						X
+					</button>
 				</ul>
 			</nav>
 			<button className={style.burger_btn} onClick={hamburgeOpenHAndler}>
