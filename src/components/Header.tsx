@@ -55,7 +55,7 @@ function Header() {
 						className={style.close_btn}
 						onClick={hamburgeCloseHAndler}
 					>
-						X
+						| X |
 					</button>
 				</ul>
 			</nav>
