@@ -15,8 +15,8 @@ const mobileMenuItems = [
 	{ title: "خانــــــــه", src: "home" },
 	{ title: "محصولات", src: "products" },
 	{ title: "گالـــــــری", src: "gallery" },
-	{ title: "دربــــــاره", src: "about" },
-	{ title: "مشــــــاوره", src: "about" },
+	{ title: "دربـــــــاره", src: "about" },
+	{ title: "مشـــــاوره", src: "about" },
 ];
 
 // ------------------------
