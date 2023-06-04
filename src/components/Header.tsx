@@ -3,12 +3,23 @@
 import React, { useState } from "react";
 import style from "./Header.module.scss";
 
-const menuItems = [
+// -------------------------
+const desktopMenuItems = [
 	{ title: "خانه", src: "home" },
 	{ title: "محصولات", src: "products" },
 	{ title: "گالری", src: "gallery" },
 	{ title: "درباره", src: "about" },
 ];
+
+const mobileMenuItems = [
+	{ title: "خانــــــــه", src: "home" },
+	{ title: "محصولات", src: "products" },
+	{ title: "گالـــــــری", src: "gallery" },
+	{ title: "دربــــــاره", src: "about" },
+	{ title: "مشــــــاوره", src: "about" },
+];
+
+// ------------------------
 
 function Header() {
 	const [isHamburgerOpen, setIsHamburgerOpen] = useState(false);
@@ -24,27 +35,29 @@ function Header() {
 		<header className={style.header}>
 			<nav className={style.full_nav}>
 				<h1 className={style.home_logo}>LOGO</h1>
-				<ul
-					className={`${style.menu} ${
-						isHamburgerOpen && style.menu_open
-					}`}
-				>
-					{menuItems.map((item) => {
+				{/* Desktop Menu */}
+				<ul className={`${style.desk_menu}`}>
+					{desktopMenuItems.map((item) => {
 						return <li key={item.src}>{item.title}</li>;
 					})}
-					{isHamburgerOpen && (
-						<li>
-							<button onClick={hamburgeCloseHAndler}>بستن</button>
-						</li>
-					)}
 				</ul>
-				<button
-					className={style.burger_btn}
-					onClick={hamburgeOpenHAndler}
+				{/* Mobile Menu */}
+				<ul
+					className={`${style.mobile_menu} ${
+						isHamburgerOpen && style["mobile_menu--open"]
+					}`}
 				>
-					| مِنو |
-				</button>
+					{mobileMenuItems.map((item) => {
+						return <li key={item.src}>{item.title}</li>;
+					})}
+					<li>
+						<button onClick={hamburgeCloseHAndler}>| بستن |</button>
+					</li>
+				</ul>
 			</nav>
+			<button className={style.burger_btn} onClick={hamburgeOpenHAndler}>
+				| مِنو |
+			</button>
 		</header>
 	);
 }
