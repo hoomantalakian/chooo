@@ -2,7 +2,9 @@
 
 import React, { useState } from "react";
 import style from "./Header.module.scss";
-
+import Image from "next/image";
+//
+import whiteLogo from "../../public/assets/white-logo.png"
 // -------------------------
 const desktopMenuItems = [
 	{ title: "خانه", src: "home" },
@@ -34,11 +36,12 @@ function Header() {
 	return (
 		<header className={style.header}>
 			<nav className={style.full_nav}>
-				<h1 className={style.home_logo}>LOGO</h1>
+				{/* <h1 className={style.home_logo}>LOGO</h1> */}
+				<Image src={whiteLogo} height="20" alt="Chooo logo" className={style.home_logo}></Image>
 				{/* Desktop Menu */}
 				<ul className={`${style.desk_menu}`}>
 					{desktopMenuItems.map((item) => {
-						return <li key={item.src}>{item.title}</li>;
+						return <li key={item.src} >{item.title}</li>;
 					})}
 				</ul>
 				{/* Mobile Menu */}
