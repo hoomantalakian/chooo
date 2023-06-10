@@ -1,16 +1,26 @@
 @import "./variables";
-// 
+//
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-// 
+//
 @import url("https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 // -------------------------
 
+// General
 html {
 	font-family: "Vazirmatn", sans-serif;
 	position: relative;
 	color: map-get($colors, light);
+}
+
+.rtl {
+	direction: rtl;
+}
+
+.txt-justify {
+	text-align: justify;
 }
 
 body {
@@ -19,14 +29,13 @@ body {
 	background-blend-mode: multiply;
 	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top left ;
+	background-position: top left;
 }
 
 main {
 	display: flex;
 	flex-direction: column;
 	justify-content: start;
-	// align-items: center;
 	padding-top: 8rem;
 	height: 100vh;
 }
@@ -36,4 +45,10 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+}
+
+// Pages
+
+.page-container {
+	margin: 8rem 5rem 0;
 }
